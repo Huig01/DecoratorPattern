@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace DecoratorPattern.Beverages
 {
-    internal class Chocolate
+    internal class Chocolate : Beverage
     {
+        public Chocolate()
+        {
+            description = "Chocolate";
+        }
+        public override string GetDescription()
+        {
+            return description;
+        }
+        public override double cost()
+        {
+            return 1.85;
+        }
     }
 }
