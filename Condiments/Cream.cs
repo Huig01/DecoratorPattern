@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace DecoratorPattern.Condiments
 {
-    internal class Water :CondimentDecorator
+    internal class Cream : CondimentDecorator
     {
-        public Water(Beverage beverage):base(beverage) 
+        public Cream(Beverage beverage) : base(beverage)
         {
-
+            this.baseBeverage = beverage;
         }
+
         public override double cost()
         {
             return 0.20 + baseBeverage.cost();
@@ -20,7 +21,7 @@ namespace DecoratorPattern.Condiments
 
         public override string GetDescription()
         {
-            return baseBeverage.GetDescription() + ", Water";
+            return baseBeverage.GetDescription() + ", Cream";
         }
     }
 }
